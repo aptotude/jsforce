@@ -1,4 +1,4 @@
-# jsforce 
+# jsforce
 
 Salesforce API Library for JavaScript applications (both on web browser and Node.js)
 
@@ -23,6 +23,14 @@ Supported Salesforce APIs are the following:
 - SOAP API
 - Streaming API
 - Tooling API
+
+### DNS Retries
+
+Due to numerous connection issues, we have implemented an automatic Network Error retry utilizing the [`requestreply`](https://github.com/FGRibreau/node-request-retry) package.
+
+As can be referenced in `lib/transport.js', we retry up to 2 times with a retry delay of 3500ms between each retry.
+
+This will improve our request reliability.
 
 ## Documentation
 
